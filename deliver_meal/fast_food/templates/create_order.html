@@ -1,0 +1,43 @@
+{% extends 'navbar.html' %}
+
+{% block title %}Create Shipment{% endblock %}
+
+{% block content %}
+
+    <div class="container animate__animated animate__fadeIn">
+     <h1 class="mt-4 animate__animated animate__fadeIn"  style="font-family: monospace;">Create Shipment for Order #{{ order.id }}</h1>
+        <form method="post" class="needs-validation form-fade" novalidate>
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.address.id_for_label }}">Address:</label>
+                {{ form.address }}
+                <div class="invalid-feedback">
+                    Please provide a valid address.
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="{{ form.phone_number.id_for_label }}">Phone Number:</label>
+                {{ form.phone_number }}
+                <div class="invalid-feedback">
+                    Please provide a valid phone number.
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Create Shipment</button>
+        </form>
+    </div>
+    <p class="mt-2">Or go back to <a href="{% url 'order_detail' order.id %}">Order #{{ order.id }}</a>.</p>
+    <!-- Add more content or links as needed -->
+
+    <script>
+        // Add fade-in animation on form display
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.form-fade').classList.add('fade-in');
+        });
+
+        // Add animation on form submission
+        document.querySelector('form').addEventListener('submit', function () {
+            // You can add your desired animation logic here
+            alert('Form submitted with animation!');
+        });
+    </script>
+{% endblock %}

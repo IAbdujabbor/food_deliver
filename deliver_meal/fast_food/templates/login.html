@@ -1,0 +1,37 @@
+{% extends 'navbar.html' %}
+{% load static %}
+
+{% block content %}
+    
+    <!-- Login Section -->
+    <div class="container">
+        <h1 class="login-heading animate__animated animate__fadeIn" style="text-align: center; font-family: Berlin Sans FB;">Login</h1>
+        <div class="row">
+            <div class="col-md-6 animate__animated animate__fadeInLeft">
+                <div class="form-container">
+                    <form method="post" action="">
+                        {% csrf_token %}
+
+                        <div class="form-group">
+                            {{ form.username.label_tag }}
+                            {{ form.username }}
+                        </div>
+
+                        <div class="form-group">
+                            {{ form.password.label_tag }}
+                            {{ form.password }}
+                        </div>
+
+                        <button type="submit" class="btn btn-primary animate__animated animate__fadeInUp">Login</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="col-md-6 right-column animate__animated animate__fadeInRight h-1000">
+                <!-- Image on the right side -->
+                <img src="{% static "images/fast-food-6974507_1920.jpg" %} "  />
+            </div>
+        </div>
+    </div>
+    <!-- ... -->
+{% endblock %}

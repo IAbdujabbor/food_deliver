@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+      .container {
+            padding: 20px 0;
+        }
+
+        .animate__animated {
+            animation-duration: 1s;
+        }
+
+        .fade-in {
+            opacity: 0;
+        }
+
+        .fade-in.animate__fadeIn {
+            opacity: 1;
+        }
+
+        .form-container {
+            background-color: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            padding: 30px;
+        }
+
+        /* Updated button color and style */
+        .btn-primary {
+            background-color: #e74c3c;
+            border: none;
+
+
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b;
+        }
+
+        .signup-heading {
+            font-family: 'Bebas Neue';
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 36px;
+            color: #e74c3c;
+        }
+
+        .form-group label {
+            font-size: 18px;
+            color: #555;
+        }
+
+        .form-control {
+            border-radius: 8px;
+        }
+
+        .right-column {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right-column img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+        }
+
+    a,li,label{font-family: Bahnschrift;}
+    button{font-family: "monospace", monospace;}
+.form-fade {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.form-fade.fade-in {
+    opacity: 1;
+}
+ .container {
+      padding: 20px 0;
+    }
+
+    .animate__animated {
+      animation-duration: 1s;
+    }
+
+    .fade-in {
+      opacity: 0;
+    }
+
+    .fade-in.animate__fadeIn {
+      opacity: 1;
+    }
+
+    /* Improved design and added animations */
+    .basket-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .basket-total {
+      background-color: #28a745;
+      color: #fff;
+      border: 1px solid #218838;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Additional styles for animations */
+    .animated-basket-item,
+    .animated-basket-total,
+    .animated-input {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Styles for the added buttons */
+    .right-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Use Bootstrap button styles */
+    .right-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .right-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Styles for the added inputs */
+    .animated-input input {
+      /* Use Bootstrap form-control for styling */
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+    body {
+      font-family: 'Roboto', 'Bebas Neue',sans-serif;
+      padding-top: 56px;
+      background-color: #f8f9fa;
+    }
+
+    .pizza-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      margin-bottom: 20px;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover .pizza-img {
+      transform: scale(1.05);
+    }
+
+    .card-title {
+      color: #e74c3c;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      color: #555;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .btn-primary {
+      background-color: #e74c3c;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #c0392b;
+    }
+
+    .navbar {
+      background-color: #343a40;
+      border-bottom: 1px solid #444;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #ffffff;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #e74c3c;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px 0;
+    }
+
+    .row {
+      margin: 0 -15px;
+    }
+
+    .col-md-4 {
+      padding: 0 15px;
+    }
+  </style>
+  <title>Pizza Party</title>
+</head>
+<body>
+    {% block navbar %}
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <a class="navbar-brand" href="#">Pizza Party Admin</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                <!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Signup</a>
+                    </li>
+                    -->
+                <!--
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    -->
+                  <li class="nav-item">
+                        <a class="nav-link" href="{% url 'admin_order_list' %}">Orders</a>
+                    </li>
+
+
+                    {% if user.is_authenticated %}
+                          <li class="nav-item">
+                        <a  class="nav-link" href="{% url 'logout' %}">Logout </a>
+                          </li>
+                        <!--
+
+{% else %}
+    Show login or signup links when the user is not authenticated
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'signup' %}">Signup</a>
+{% endif %}
+                -->
+
+                </ul>
+            </div>
+
+                 {% for order in orders %}
+            <a href="{%  url 'order_detail' order.id%}" type="button" class="btn btn-primary">
+                Basket <span class="badge badge-light"></span>
+                <span class="sr-only">unread messages</span>
+           {% endfor %}
+            </a>
+
+        </nav>
+    {% endblock %}
+
+    <div >
+        {% block content %}{% endblock %}
+    </div>
+ <footer style="margin-top:10%">
+    <p >&copy; 2024 Pizza Party. All rights reserved.</p>
+  </footer>
+

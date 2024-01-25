@@ -1,0 +1,22 @@
+{% extends 'navbar.html' %}
+
+
+
+{% block content %}
+    <h1 class="mt-4">{{ food.name }} has been added to your basket!</h1>
+    <p class="mt-2">Continue shopping or go to your <a href="">basket</a>.</p>
+
+
+     <ul class="list-group">
+        {% for order in orders %}
+            <li class="list-group-item">
+                <a href="">Order #{{ order.id }}</a>
+                <span class="badge bg-primary">Total: ${{ order.total_price }}</span>
+            </li>
+        {% endfor %}
+    </ul>
+
+
+
+    <!-- Add more content or links as needed -->
+{% endblock %}

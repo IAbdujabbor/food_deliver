@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Include necessary meta tags, stylesheets, and scripts -->
+  <!-- ... -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <style>
+    body {
+      font-family: 'Roboto', 'Bebas Neue', sans-serif;
+      padding-top: 56px;
+      background-color: #f8f9fa;
+    }
+
+    .container {
+      padding: 20px 0;
+    }
+
+    .animate__animated {
+      animation-duration: 1s;
+    }
+
+    .fade-in {
+      opacity: 0;
+    }
+
+    .fade-in.animate__fadeIn {
+      opacity: 1;
+    }
+
+    /* Improved design and added animations */
+    .basket-item {
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .basket-total {
+      background-color: #28a745;
+      color: #fff;
+      border: 1px solid #218838;
+      border-radius: 8px;
+      padding: 15px;
+      margin-top: 20px;
+    }
+
+    /* Additional styles for animations */
+    .animated-basket-item,
+    .animated-basket-total,
+    .animated-input {
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Styles for the added buttons */
+    .right-buttons {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    /* Use Bootstrap button styles */
+    .right-button {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    .right-button:hover {
+      background-color: #0056b3;
+    }
+
+    /* Styles for the added inputs */
+    .animated-input input {
+      /* Use Bootstrap form-control for styling */
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+    }
+  </style>
+
+  <title>Shopping Basket</title>
+</head>
+<body>
+  <div class="container mt-4 fade-in animate__fadeIn">
+    <h1 class="text-center mb-4">Shopping Basket</h1>
+    <div class="row">
+      <div class="col-md-8 offset-md-2">
+
+            {% for i in basket_items %}
+        <div class="basket-item animated-basket-item">
+
+
+                    <div class="right-buttons">
+            <!-- Use Bootstrap btn class for styling -->
+            <button class="btn btn-primary right-button">Button 1</button>
+            <button class="btn btn-primary right-button">Button 2</button>
+          </div>
+          <p>Food name: {{ i.product.name }}a</p>
+          <p>Food price: {{ i.product.price }} $   </p>
+            <p>totall {{ i.get_total }} $</p>
+           <p>Quantity {{ i.quantity }}</p>
+
+        </div>
+
+              {% endfor %}
+
+        <div class="basket-total animated-basket-total">
+          <p>Total price:${{ total_basket_price|floatformat:2 }} </p>
+
+        </div>
+        <br>
+        
+        <div class="animated-input">
+          <!-- Use Bootstrap form-control class for styling -->
+          <input type="text" class="form-control" placeholder="Address">
+        </div>
+        <div class="animated-input">
+          <!-- Use Bootstrap form-control class for styling -->
+          <input type="text" class="form-control" placeholder="Phone Number">
+        </div>
+        
+        <button class="btn btn-primary center-button">Button 1</button>
+        <!-- You can display the added items, quantity, and total price here -->
+      </div>
+    </div>
+  </div>
+
+  <!DOCTYPE html>
+<html>
+<head>
+    <title>Your Basket</title>
+</head>
+<body>
+    <h1>Your Basket</h1>
+    <ul>
+
+    </ul>
+
+    <p>Total Price: ${{ basket_items.get_all_t }}</p>
+</body>
+</html>
+
+  <!-- Include necessary scripts -->
+  <!-- ... -->
+

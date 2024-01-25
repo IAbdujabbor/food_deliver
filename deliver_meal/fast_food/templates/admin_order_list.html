@@ -1,0 +1,35 @@
+<!-- order_list.html -->
+
+{% extends 'admin_navbar.html' %}
+
+{% block title %}Order List{% endblock %}
+
+{% block content %}
+    <div class="container animate__animated animate__fadeIn animate__delay-1s">
+        <h1 class="mt-4" style="font-family:  Bahnschrift; text-align: center">All Orders</h1>
+        <ul class="list-group">
+
+            {% for order in orders1 %}
+                <li class="list-group-item animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="{% url 'admin_shipment_detail' order.id %}" class="text-decoration-none text-dark">
+                        Order #{{ order.id }}
+                    </a>
+                    <span class="badge bg-primary animate__animated animate__fadeInUp animate__delay-1s">
+                        Total: ${{ order.overall_price }}
+                    </span>
+
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <script>
+        // You can customize the animations further or add more based on your needs
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelector('.animate__animated').classList.add('animate__fadeIn', 'animate__delay-1s');
+            document.querySelectorAll('.animate__animated').forEach(function (elem) {
+                elem.classList.add('animate__fadeInUp', 'animate__delay-1s');
+            });
+        });
+    </script>
+{% endblock %}

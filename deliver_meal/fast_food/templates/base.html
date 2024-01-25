@@ -1,0 +1,262 @@
+{% extends 'navbar.html' %}
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+
+    body {
+      font-family: 'Roboto', 'Bebas Neue',sans-serif;
+      padding-top: 56px;
+      background-color: #f8f9fa;
+    }
+
+    .pizza-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      transition: 0.3s;
+      margin-bottom: 20px;
+      overflow: hidden;
+      opacity: 0;
+    }
+
+    .card:hover {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    .card:hover .pizza-img {
+      transform: scale(1.05);
+    }
+
+    .card-title {
+      color: #e74c3c;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .card-text {
+      color: #555;
+      transition: color 0.3s ease-in-out;
+    }
+
+    .btn-primary {
+      background-color: #e74c3c;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #c0392b;
+    }
+
+    .navbar {
+      background-color: #343a40;
+      border-bottom: 1px solid #444;
+      box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar-brand {
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 24px;
+    }
+
+    .navbar-toggler-icon {
+      background-color: #ffffff;
+    }
+
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+
+    .navbar-nav .nav-link:hover {
+      color: #e74c3c;
+    }
+
+    footer {
+      background-color: #343a40;
+      color: #ffffff;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      padding: 20px 0;
+    }
+
+    .row {
+      margin: 0 -15px;
+    }
+
+    .col-md-4 {
+      padding: 0 15px;
+    }
+  </style>
+  <title>Pizza Party</title>
+</head>
+<body>
+{% block content %}
+
+
+<!-- Our Success Section with Image on Right -->
+<section id="success" class="mt-4">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 animate__animated animate__fadeIn">
+        <h1 class="text-left mb-4" style="font-family: 'Bebas Neue';">Welcome To Our Service</h1>
+                      <p>🍔 <strong>Satisfying Your Cravings, One Bite at a Time!</strong></p>
+
+        <p>Welcome to the ultimate destination for fast food lovers! At Fast Food Deliver, we're passionate about serving up delicious, high-quality meals that are as satisfying as they are quick. <br>Whether you're in need of a swift lunch break feast, a cozy family dinner, or a late-night snack, our menu is designed to cater to every taste and occasion.</p>
+          <p>  🍟 <strong>   Flavorful, Fast!</strong> </p>
+          <p>We believe that fast food doesn't mean compromising on quality or taste. That's why we source the freshest ingredients, prepare our meals with care, and serve them up hot and fast - straight from our kitchen to your plate (or hands!).</p>
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-end animate__animated animate__fadeIn">
+        <img src="{% static 'images/fast-food-6974507_1920.jpg' %}" alt="Beautiful Image" style="max-width: 100%;height: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+       
+      </div>
+      <div class="col-md-6 d-flex align-items-center justify-content-end animate__animated animate__fadeIn">
+        <img src="{% static 'images/shake-shack-cheeseburgers.webp' %}" alt="Beautiful Image" style="max-width: 100%;height: 100%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+       
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeIn">
+        <h1 class="text-left mb-4" style="font-family: 'Bebas Neue';">🌭 A Menu That Makes Your Mouth Water</h1>
+        <p>We're all about convenience. Order online through our user-friendly website, download our mobile app for quick access, or simply walk into our nearest location. Enjoy hassle-free ordering, secure payment options, and lightning-fast service.</p>
+          <p>     🥗 <strong> Committed to Your Satisfaction </strong> </p>
+          <p>At Fast Food Deliver, your satisfaction is our priority. We're constantly evolving our menu, improving our service, and ensuring that every visit leaves you with a smile. Our friendly staff is always here to help, making sure your experience is as enjoyable as our food.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<hr>
+
+<section id="about" class="mt-4">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6 animate__animated animate__fadeInLeft">
+        <h3>🍕 Easy Ordering, Happy Eating</h3>
+        <p>Fast Food Deliver's passion for food is shared with our fans, which is why we never compromise. Fresh ingredients hand-prepared that satisfy your craving.</p>
+   <p>We're all about convenience. Order online through our user-friendly website, download our mobile app for quick access, or simply walk into our nearest location. Enjoy hassle-free ordering, secure payment options, and lightning-fast service.</p>
+          <p>Stay connected with us for the latest updates, exclusive offers, and mouthwatering deals. Follow us on social media, join our loyalty program, and be the first to know about our newest dishes and specials.</p>
+      </div>
+      <div class="col-md-6 animate__animated animate__fadeInRight">
+        <img src="{% static 'images/Did-you-know-these-regional-fast-food-chains-have-locations-in-North-Carolina.webp' %}" alt="Our Chef" class="img-fluid rounded-circle">
+      </div>
+    </div>
+  </div>
+</section id="ourmneu">
+  <div class="container mt-4">
+    <h1 class="text-center my-4" style="font-family: 'Bebas Neue';">Our Menu</h1>
+    <div class="row">
+ {% if user.is_authenticated %}
+      {% for i in foods%}
+      <!-- Pizza Cards -->
+      <div class="col-md-3"style="padding: 10px; width: 150px;">
+        <div class="card animate__animated animate__fadeIn">
+          <img src="{{ i.image.url}}" alt="Cheese Pizza" class="card-img-top pizza-img" style="width:100%; height:190px;">
+          <div class="card-body">
+            <p class="card-title">{{ i.name }}</p>
+
+            <p class="card-text">{{ i.price }}</p>
+
+                            <form method="post" action="{% url 'add_to_basket' i.id %}">
+                {% csrf_token %}
+                <input type="hidden" name="quantity" value="1">  <!-- Assuming a default quantity of 1 -->
+                <button  type="submit" class="btn btn-primary text-center "  style="border-radius:100px ; padding:8px;">Add to Basket</button>
+            </form>
+          </div>
+        </div>
+
+      </div>   {% endfor %}
+
+    {% else %}
+
+        {% for i1 in foods%}
+      <!-- Pizza Cards -->
+      <div class="col-md-3"style="padding: 10px; width: 150px;">
+        <div class="card animate__animated animate__fadeIn">
+          <img src="{{ i1.image.url}}" alt="Cheese Pizza" class="card-img-top pizza-img" style="width:100%; height:190px;">
+          <div class="card-body">
+            <p class="card-title">{{ i1.name }}</p>
+
+            <p class="card-text">{{ i1.price }} $</p>
+
+
+                <input type="hidden" name="quantity" value="1">  <!-- Assuming a default quantity of 1 -->
+                <a  href="login/" class="btn btn-primary text-center "  style="border-radius:100px ; padding:8px;">Add to Basket</a>
+
+          </div>
+        </div>
+
+      </div>   {% endfor %}
+    {% endif %}
+
+
+      <!-- End Pizza Cards -->
+
+      <!-- Fast Food Cards -->
+
+      <!-- End Fast Food Cards -->
+
+    </div>
+  </div>
+
+  
+  <!-- Client Comments Section -->
+  <section id="comments" class="bg-light py-5">
+    <div class="container">
+      <h2 class="text-center mb-4 animate__animated animate__fadeIn" style="font-family: 'Bebas Neue';">Client Comments</h2>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 animate__animated animate__fadeIn">
+            <div class="card-body">
+              <p class="card-text">"The Best Burger in town! Loved the Service."</p>
+              <p class="card-text text-muted">- John Doe</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 animate__animated animate__fadeIn">
+            <div class="card-body">
+              <p class="card-text">"Amazing Pepperoni Pizza, the flavor is outstanding."</p>
+              <p class="card-text text-muted">- Jane Smith</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 animate__animated animate__fadeIn">
+            <div class="card-body">
+              <p class="card-text">"Veggie Pizza is a healthy delight, perfect for vegetarians."</p>
+              <p class="card-text text-muted">- Mike Johnson</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+<Br>
+
+{% endblock %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
